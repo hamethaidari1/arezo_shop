@@ -1,0 +1,279 @@
+.adminLayout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f1eb;
+  font-family: 'DM Sans', sans-serif;
+  color: #333;
+}
+
+.sidebar {
+  fixed: left;
+  width: 240px;
+  background-color: #0a0a0a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.sidebarLogo {
+  padding: 28px 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.sidebarLogoLine {
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c9a84c, transparent);
+  margin-bottom: 6px;
+}
+
+.sidebarLogoName {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebarLogoMain {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #c9a84c;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.sidebarLogoDivider {
+  color: rgba(201, 168, 76, 0.6);
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+.sidebarLogoSub {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.sidebarAdminLabel {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: rgba(201, 168, 76, 0.6);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.sidebarNav {
+  flex: 1;
+  padding: 24px 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar styles for sidebar */
+.sidebarNav::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebarNav::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+}
+
+.navItem, .signOutItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.navItem:hover, .signOutItem:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navItem.active {
+  color: #c9a84c;
+  background-color: rgba(201, 168, 76, 0.1);
+  border-left: 3px solid #c9a84c;
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.navDivider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin: 16px 24px;
+}
+
+.signOutItem {
+  margin-top: auto;
+}
+
+/* Main Content Area */
+.mainContent {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topBar {
+  height: 64px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hamburgerBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburgerBtn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.pageTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin: 0;
+  color: #000;
+}
+
+.adminProfile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.adminInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.adminName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+}
+
+.adminEmail {
+  font-size: 11px;
+  color: #888;
+}
+
+.adminAvatar {
+  width: 32px;
+  height: 32px;
+  background-color: #0a0a0a;
+  color: #c9a84c;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.contentArea {
+  padding: 32px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebarOverlay {
+  display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .mainContent {
+    margin-left: 0;
+  }
+  
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .hamburgerBtn {
+    display: flex;
+  }
+  
+  .sidebarOverlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+  
+  .topBar {
+    padding: 0 20px;
+  }
+  
+  .contentArea {
+    padding: 20px;
+  }
+}

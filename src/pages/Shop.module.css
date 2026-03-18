@@ -1,0 +1,192 @@
+.shop {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: #fff;
+  border: 1px solid #e0dbd0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #555;
+}
+
+.chip:hover, .activeChip {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.search {
+  padding: 10px 15px;
+  border: 1px solid #e0dbd0;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 250px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+}
+
+.sortSelect {
+  padding: 10px 15px;
+  border: 1px solid #e0dbd0;
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.productCount {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.noProducts {
+  text-align: center;
+  padding: 60px 0;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0 40px 40px;
+}
+
+.loadMoreContainer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.loadMoreBtn {
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+  padding: 12px 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loadMoreBtn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.allShown {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .shop {
+    padding: 20px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .controls {
+    width: 100%;
+    flex-direction: column;
+  }
+  .search, .sortSelect {
+    max-width: 100%;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -468px 0; }
+  100% { background-position: 468px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite linear;
+  height: 380px;
+  border-radius: 4px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  width: 100%;
+  border: 1px dashed #ddd;
+  margin-top: 40px;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.emptyTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #000;
+  margin: 0 0 8px 0;
+}
+
+.emptyText {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .productsGrid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 900px) {
+  .productsGrid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .productsGrid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0 16px 24px; }
+}
+@media (max-width: 400px) {
+  .productsGrid { grid-template-columns: repeat(1, 1fr); }
+}
+
+/* Fix for Persian text in shop products section */
+.shop * {
+  font-family: 'Vazirmatn', 'DM Sans', sans-serif;
+}

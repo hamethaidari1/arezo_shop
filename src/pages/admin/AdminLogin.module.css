@@ -1,0 +1,126 @@
+.page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 48px;
+  border-radius: 8px;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #c9a84c;
+  text-align: center;
+  letter-spacing: 4px;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+.subtitle {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #888;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin-bottom: 24px;
+}
+.field {
+  margin-bottom: 16px;
+}
+.label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 6px;
+}
+.input {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 12px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.input:focus {
+  border-color: #c9a84c;
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+}
+.input:disabled {
+  background: #f9f9f9;
+  cursor: not-allowed;
+}
+.passwordWrapper {
+  position: relative;
+}
+.passwordWrapper .input {
+  padding-right: 44px;
+}
+.eyeBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+}
+.error {
+  background: #fff5f5;
+  border: 1px solid #ffcccc;
+  color: #c0392b;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.submitBtn {
+  width: 100%;
+  height: 48px;
+  background: #0a0a0a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: inherit;
+  margin-top: 8px;
+}
+.submitBtn:hover:not(:disabled) {
+  background: #333;
+}
+.submitBtn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+.backLink {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #888;
+  text-decoration: none;
+}
+.backLink:hover {
+  color: #333;
+}
