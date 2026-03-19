@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footerTop}>
         <div className={styles.col}>
-          <h2 className={styles.logo}>Babona Collection</h2>
+          <h2 className={styles.logo}>Arezo Shop</h2>
           <p className={styles.copyright}>© 2026 Clarity. All rights reserved.</p>
         </div>
         <div className={styles.col}>

@@ -164,9 +164,9 @@ const Header = () => {
           
           {/* Main brand name row */}
           <div className={styles.logoNameRow}>
-            <span className={styles.logoMain}>BABONA</span>
+            <span className={styles.logoMain}>Arezo</span>
             <span className={styles.logoDivider}>✦</span>
-            <span className={styles.logoSub}>Collection</span>
+            <span className={styles.logoSub}>Shop</span>
           </div>
           
           {/* Bottom tagline */}

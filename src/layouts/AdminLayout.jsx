@@ -46,9 +46,9 @@ const AdminLayout = ({ children, title }) => {
           
           {/* Brand name */}
           <div className={styles.sidebarLogoName}>
-            <span className={styles.sidebarLogoMain}>BABONA</span>
+            <span className={styles.sidebarLogoMain}>ََArez</span>
             <span className={styles.sidebarLogoDivider}>✦</span>
-            <span className={styles.sidebarLogoSub}>Collection</span>
+            <span className={styles.sidebarLogoSub}>Shop</span>
           </div>
           
           {/* Admin panel label */}
