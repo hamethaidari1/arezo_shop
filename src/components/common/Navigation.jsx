@@ -69,7 +69,10 @@ const Navigation = () => {
     <nav className="navigation" ref={navbar}>
       <div className="logo">
         <Link onClick={onClickLink} to="/">
-            <span style={{fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", fontWeight:"700", color:"#c9a84c", letterSpacing:"3px"}}>AREZO <span style={{fontStyle:"italic", fontWeight:"400", color:"#fff"}}>Shop</span></span>
+            <div style={{display:'flex',alignItems:'center',gap:'4px'}}>
+              <span style={{fontFamily:"'Playfair Display',serif",fontSize:"1.1rem",fontWeight:"700",color:"#c9a84c",letterSpacing:"3px"}}>AREZO</span>
+              <span style={{fontFamily:"'Playfair Display',serif",fontSize:"1.1rem",fontWeight:"400",fontStyle:"italic",color:"rgba(255,255,255,0.9)",letterSpacing:"2px"}}>Shop</span>
+            </div>
         </Link>
       </div>
       <ul className="navigation-menu-main">

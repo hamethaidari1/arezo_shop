@@ -13,7 +13,10 @@ const AdminNavigation = () => {
   return (
     <nav className="navigation navigation-admin">
       <div className="logo">
-          <span style={{fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", fontWeight:"700", color:"#c9a84c", letterSpacing:"3px"}}>AREZO <span style={{fontStyle:"italic", fontWeight:"400", color:"#fff"}}>Shop</span></span>
+          <div style={{display:'flex',alignItems:'center',gap:'4px'}}>
+            <span style={{fontFamily:"'Playfair Display',serif",fontSize:"1.1rem",fontWeight:"700",color:"#c9a84c",letterSpacing:"3px"}}>AREZO</span>
+            <span style={{fontFamily:"'Playfair Display',serif",fontSize:"1.1rem",fontWeight:"400",fontStyle:"italic",color:"rgba(255,255,255,0.9)",letterSpacing:"2px"}}>Shop</span>
+          </div>
       </div>
       <ul className="navigation-menu">
         <li className="navigation-menu-item">
