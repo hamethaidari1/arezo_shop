@@ -1,7 +1,6 @@
 /* eslint-disable indent */
 import { FilterOutlined, ShoppingOutlined } from '@ant-design/icons';
 import * as ROUTE from '@/constants/routes';
-import logo from '@/images/logo-full.png';
 import React, { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import {
@@ -69,7 +68,9 @@ const Navigation = () => {
   return (
     <nav className="navigation" ref={navbar}>
       <div className="logo">
-        <Link onClick={onClickLink} to="/"><img alt="Logo" src={logo} /></Link>
+        <Link onClick={onClickLink} to="/">
+            <span style={{fontFamily:"'Playfair Display',serif", fontSize:"1.1rem", fontWeight:"700", color:"#c9a84c", letterSpacing:"3px"}}>AREZO <span style={{fontStyle:"italic", fontWeight:"400", color:"#fff"}}>Shop</span></span>
+        </Link>
       </div>
       <ul className="navigation-menu-main">
         <li><NavLink activeClassName="navigation-menu-active" exact to={ROUTE.HOME}>Home</NavLink></li>

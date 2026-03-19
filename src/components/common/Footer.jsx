@@ -1,5 +1,4 @@
 import * as Route from '@/constants/routes';
-import logo from '@/images/logo-full.png';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -23,7 +22,15 @@ const Footer = () => {
         </strong>
       </div>
       <div className="footer-col-2">
-        <img alt="Footer logo" className="footer-logo" src={logo} />
+        <div style={{
+          fontFamily: "'Playfair Display', serif",
+          fontSize: "1.2rem",
+          fontWeight: "700",
+          color: "#c9a84c",
+          letterSpacing: "3px"
+        }}>
+          AREZO <span style={{fontStyle:"italic", fontWeight:"400", color:"rgba(10,10,10,0.85)"}}>Shop</span>
+        </div>
         <h5>
           &copy;&nbsp;
           {new Date().getFullYear()}
